@@ -1,3 +1,8 @@
+/*	Author       :	Muntasir Muzahid Chowhdury
+	Problem Name :  Rectangle Union (LOJ 1120)
+	Algorithm    :  Variation On Orthogonal Range Search
+	Complexity   :	*/
+
 //HEADERFILE
 //#pragma warning (disable : 4786)
 #include<set>
@@ -16,7 +21,6 @@ using namespace std;
 
 const int INF = (1<<29);
 
-void SWAP(int &a, int &b){	a = a^b; b = a^b; a = a^b;	}
 //int min(int a,int b) {	return a<b?a:b;	}
 //int max(int a,int b) {	return a>b?a:b;	}
 
