@@ -1,4 +1,4 @@
-(This repository will be updated shortly)
+(THIS REPOSITORY WILL BE UPDATED SHORTLY)
 
 Algorithmic-Problem-Solving
 ===========================
