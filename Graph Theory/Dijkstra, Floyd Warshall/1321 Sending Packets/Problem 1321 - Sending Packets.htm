@@ -1,0 +1,747 @@
+
+<html>
+	<head>
+		<title>Jan's LightOJ :: Problem 1321 - Sending Packets</title>
+		<link rel="stylesheet" type="text/css" href="styles/style.css" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<script>
+			function handleMenu( ) {
+				if( document.getElementById("showNavigation").style.display == "none" ) {
+					document.getElementById("showNavigation").style.display = "inline";
+					document.getElementById("menuImage").src = "images/close_menu.png";
+					document.getElementById("problem").style.margin = "0 3px 0 200px";
+				}
+				else {
+					document.getElementById("showNavigation").style.display = "none";
+					document.getElementById("menuImage").src = "images/open_menu.png";
+					document.getElementById("problem").style.margin = "3px 3px 3px 3px";
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+<style>
+div.tempMessage {
+  float: left;
+  font-size: 30;
+  margin-top: 10px;
+  margin-left: 300px;
+  position: absolute;
+  border: 2px solid white;
+  background: yellow;
+  border-radius: 5px;
+  padding: 2px;
+}
+div.tempMessage a {
+  text-decoration: underline;
+  color: red;
+}
+</style>
+<div class="topDiv">
+			<img src="./images/main.png" class="topImage" style="float: left;">
+                <!--<div class="tempMessage"><a href="http://lightoj.com/lightojv2/contest/215/problems" target=_blank>ACM ICPC Dhaka Regionals Online Preliminary Contest is scheduled here.</a></div>!-->
+			<div class="topMenuMessage" style="display: block; float: right; padding: 50 5 0 0;">
+				Server Time:
+				<a class="top_link" target="_blank" href="http://www.timeanddate.com/worldclock/fixedtime.html?iso=20140220T015640">
+					Thu Feb 20, 2014 7:56 am				</a>
+			</div>
+		</div>
+		<div class="topMenu" align="center">
+			<table width="100%">
+				<tr>
+					<td width="10%">
+						<div class="topMenuMessage">
+							&nbsp;<a class="top_link" href="index.php">
+								Home
+							</a>
+						</div>
+					</td>
+					<td width="10%">
+						<div class="topMenuMessage">
+							<a class="top_link" href="volume_problemset.php">
+								Volume
+							</a>
+						</div>
+					</td>
+					<td width="10%">
+						<div class="topMenuMessage">
+							<a class="top_link" href="contest_index.php">
+								Contest
+							</a>
+						</div>
+					</td>
+					<td width="10%">
+						<div class="topMenuMessage">
+							<a class="top_link" href="article_showcategory.php">Training</a>
+						</div>
+					</td>
+					<td width="10%">
+						<div class="topMenuMessage">
+							<a class="top_link" href="forum_index.php">Community</a>
+						</div>
+					</td>
+					<td width="10%">
+						<div class="topMenuMessage">
+							<a class="top_link" href="credits_index.php">Credits</a>
+						</div>
+					</td>
+					<td width="60%" align="right">
+						<div class="topMenuMessage">
+							Welcome
+								<a class="top_link" href="index_edituser.php">
+									Muntasir Muzahid Chowdhury								</a>
+							(<a class="top_link" href="login_logout.php">
+								logout
+							</a>)&nbsp;
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="wrapper">
+			<div id="problem">
+				<a href="javascript: handleMenu()" style="float: left;" class="user_link">
+					<img id="menuImage" src="images/open_menu.png" \>
+				</a>
+				<div id="problem_name">
+					1321 - Sending Packets				</div>
+				<div align="center" style="border-top: 1px solid #eeeeee;">
+					<table id="mytable" cellspacing="0" style="width:450;padding: 5 0 0 0;">
+						<td class="one" style="border-top: 1px solid #C1DAD7; border-left: 1px solid #C1DAD7;padding:2 6 0 12;" width=100 title="special judge">
+							<a class="user_link" href="volume_submit.php?problem=1321">
+								<img src="images/submit3.png">
+							</a>
+						</td>
+						<td class="one" style="border-top: 1px solid #C1DAD7;" width=100>
+							<a class="user_link" href="volume_showproblem.php?problem=1321&language=english&type=pdf">
+								PDF (English)							</a>
+						</td>
+						<td class="one" style="border-top: 1px solid #C1DAD7;" width=100>
+							<a class="user_link" href="volume_problemstat.php?problem=1321">
+								Statistics							</a>
+						</td>
+						<td class="one" style="border-top: 1px solid #C1DAD7;" width=100>
+							<a class="user_link" href="forum_showproblem.php?problem=1321">
+								Forum							</a>
+						</td>
+					</table>
+				</div>
+				<div align="center" style="border-bottom: 1px solid #eeeeee;">
+					<table id="mytable" cellspacing="0" style="width:450;padding: 0 0 5 0;">
+						<td class="two" style="border-left: 1px solid #C1DAD7;" width=100>
+							Time Limit: <span style="color: #B45F04;">2 second(s)</span>
+						</td>
+						<td class="two" width=100>
+							Memory Limit: <span style="color: #B45F04;">32 MB</span>
+						</td>
+					</table>
+				</div>
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Mangal;
+	panose-1:2 4 5 3 5 2 3 3 2 2;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Garamond;
+	panose-1:2 2 4 4 3 3 1 1 8 3;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"Bernard MT Condensed";
+	panose-1:2 5 8 6 6 9 5 2 4 4;}
+@font-face
+	{font-family:"Bookman Old Style";
+	panose-1:2 5 6 4 5 5 5 2 2 4;}
+@font-face
+	{font-family:"Courier 10 Pitch";}
+@font-face
+	{font-family:"DejaVu Sans";}
+@font-face
+	{font-family:"\@Courier 10 Pitch";}
+@font-face
+	{font-family:"\@DejaVu Sans";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	text-align:justify;
+	line-height:115%;
+	font-size:12.0pt;
+	font-family:"Garamond","serif";}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Cambria","serif";
+	color:green;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Arial","sans-serif";
+	color:black;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Garamond","serif";
+	color:#4F81BD;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Header Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Garamond","serif";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Garamond","serif";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:0in;
+	text-align:center;
+	font-size:36.0pt;
+	font-family:"Bernard MT Condensed","serif";
+	color:green;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Title Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	font-size:36.0pt;
+	font-family:"Bernard MT Condensed","serif";
+	color:green;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Title Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	font-size:36.0pt;
+	font-family:"Bernard MT Condensed","serif";
+	color:green;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Title Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:0in;
+	text-align:center;
+	font-size:36.0pt;
+	font-family:"Bernard MT Condensed","serif";
+	color:green;
+	letter-spacing:.25pt;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{mso-style-link:"Subtitle Char";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	line-height:115%;
+	font-size:24.0pt;
+	font-family:"Bookman Old Style","serif";
+	letter-spacing:.75pt;
+	font-weight:bold;}
+p.MsoBodyText3, li.MsoBodyText3, div.MsoBodyText3
+	{mso-style-link:"Body Text 3 Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Verdana","sans-serif";
+	color:black;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+pre
+	{mso-style-link:"HTML Preformatted Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";}
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Garamond","serif";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+span.MsoSubtleEmphasis
+	{color:gray;
+	font-style:italic;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-link:Header;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Arial","sans-serif";
+	color:black;
+	font-weight:bold;}
+span.BodyText3Char
+	{mso-style-name:"Body Text 3 Char";
+	mso-style-link:"Body Text 3";
+	font-family:"Verdana","sans-serif";
+	color:black;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-link:"Balloon Text";
+	font-family:"Tahoma","sans-serif";}
+span.HTMLPreformattedChar
+	{mso-style-name:"HTML Preformatted Char";
+	mso-style-link:"HTML Preformatted";
+	font-family:"Courier New";}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:"Bernard MT Condensed","serif";
+	color:green;
+	letter-spacing:.25pt;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:bold;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Cambria","serif";
+	color:green;
+	font-weight:bold;}
+span.SubtitleChar
+	{mso-style-name:"Subtitle Char";
+	mso-style-link:Subtitle;
+	font-family:"Bookman Old Style","serif";
+	letter-spacing:.75pt;
+	font-weight:bold;}
+p.SampleIO, li.SampleIO, div.SampleIO
+	{mso-style-name:SampleIO;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:16.4pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Courier 10 Pitch";}
+.MsoChpDefault
+	{font-size:10.0pt;}
+ /* Page Definitions */
+ @page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple>
+
+<div class=Section1>
+
+<p class=MsoNormal>Alice and Bob are trying to communicate through the internet.
+Just assume that there are <b>N</b> routers in the internet and they are
+numbered from <b>0</b> to <b>N-1</b>. Alice is directly connected to router <b>0</b>
+and Bob is directly connected to router <b>N-1</b>. Alice initiates the connection
+and she wants to send <b>S</b> KB of data to Bob. Data can go to the <b>(N-1)<sup>th</sup></b>
+router from the <b>0<sup>th</sup></b> router either directly or via some
+intermediate routers. There are some bidirectional links between some routers.</p>
+
+<p class=MsoNormal>The links between the routers are not necessarily 100%
+perfect. So, for each link, a probability <b>p<sub>i</sub></b> is given. That
+means if <b>u</b> and <b>v</b> are two routers and if their underlying link has
+probability <b>p<sub>i</sub></b>, it means that if data is sent from <b>u</b>
+to <b>v</b>, the probability of successfully getting the data in <b>v</b> is <b>p<sub>i</sub></b>
+and vice versa. If multiple links are used the probability of getting the data
+in destination is the multiplication of the probabilities of the links that
+have been used.</p>
+
+<p class=MsoNormal>Assume that it takes exactly <b>K</b> seconds for a packet
+to reach Bob's router from Alice's router (independent on the number of links)
+if it's successful. And when the data is successfully received in Bob's router,
+it immediately sends an acknowledgement to Alice's router and the acknowledgement
+always reaches h<span style='line-height:115%'>er router exactly in <b>K</b>
+seconds (it never disappears).</span></p>
+
+<p class=MsoNormal><span style='line-height:115%'>Alice's router used the
+following algorithm for the data communication.</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='text-align:justify;text-indent:-.25in'><span
+style='font-size:12.0pt;line-height:115%;font-family:"Garamond","serif"'>1)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:12.0pt;line-height:115%;font-family:"Garamond","serif"'>At
+time 0, the first KB of data is chosen to be sent.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-align:justify;text-indent:-.25in'><span
+style='font-size:12.0pt;line-height:115%;font-family:"Garamond","serif"'>2)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:12.0pt;line-height:115%;font-family:"Garamond","serif"'>It establishes
+a path (it takes no time) to the destination router and sends the data in this
+route.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-align:justify;text-indent:-.25in'><span
+style='font-size:12.0pt;line-height:115%;font-family:"Garamond","serif"'>3)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:12.0pt;line-height:115%;font-family:"Garamond","serif"'>It
+waits for exactly <b>2K</b> seconds.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.0in;text-align:justify;
+text-indent:-.25in'><span style='font-size:12.0pt;line-height:115%;font-family:
+"Garamond","serif"'>a.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt;line-height:115%;font-family:"Garamond","serif"'>If
+it gets the acknowledgement of the current data in this interval</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.5in;text-align:justify;
+text-indent:-1.5in'><span style='font-size:12.0pt;line-height:115%;font-family:
+"Garamond","serif"'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>i.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt;line-height:115%;font-family:"Garamond","serif"'>If
+<b>S</b> KB of data are sent, then step 4 is followed.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.5in;text-align:justify;
+text-indent:-1.5in'><span style='font-size:12.0pt;line-height:115%;font-family:
+"Garamond","serif"'><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt;line-height:115%;font-family:"Garamond","serif"'>Otherwise,
+it takes 1 KB of the next data, and then step 2 is followed.</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.0in;text-align:justify;
+text-indent:-.25in'><span style='font-size:12.0pt;line-height:115%;font-family:
+"Garamond","serif"'>b.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt;line-height:115%;font-family:"Garamond","serif"'>Otherwise
+it resends the current 1 KB of data and then step 2 is followed.</span></p>
+
+<p class=MsoListParagraphCxSpLast style='text-align:justify;text-indent:-.25in'><span
+style='font-size:12.0pt;line-height:115%;font-family:"Garamond","serif"'>4)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-size:12.0pt;line-height:115%;font-family:"Garamond","serif"'>All
+the data are sent, so it reports Alice.</span></p>
+
+<p class=MsoNormal>Assume that the probabilities of the links are static and
+independent. That means it doesn't depend on the result of the previously sent
+data. Now your task is to choose some routes through the routers such that data
+can be sent in these routes and the expected time to send all the data to the
+destination routes is minimized. You only have to report the minimum expected
+time. </p>
+
+<h1>Input</h1>
+
+<p class=MsoNormal>Input starts with an integer <b>T (</b><b>&#8804; 100)</b>,
+denoting the number of test cases.</p>
+
+<p class=MsoNormal>Each case starts with a line containing four integers <b>N
+(2 &#8804; N &#8804; 100)</b>, <b>M (1 &#8804; M)</b>, <b>S (1 &#8804; S
+&#8804; 10<sup>9</sup>)</b> and <b>K (1 &#8804; K &#8804; 20),</b> where <b>M</b>
+denotes the number of bidirectional links. Each of the next <b>M</b> lines
+contains three integers <b>u<sub>i</sub> v<sub>i</sub></b> <b>p<sub>i</sub></b>,
+meaning that there is a link between router <b>u<sub>i</sub></b> and <b>v<sub>i</sub></b>
+the probability for a successful message transfer in this link is <b>p<sub>i</sub>%</b>
+<b>(0 &#8804; u<sub>i</sub>, v<sub>i</sub> &lt; N, u<sub>i</sub> &#8800; v<sub>i</sub>,
+0 &lt; p<sub>i</sub> &#8804; 100)</b>. There will be at most one link between
+two routers.</p>
+
+<h1>Output</h1>
+
+<p class=MsoNormal>For each case, print the case number and the minimum
+possible expected time to send all the data. Errors less than <b>10<sup>-3</sup></b>
+will be ignored. You can assume that at least one valid route between them always
+exists. And the result will be less than <b>10<sup>13</sup></b>.</p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=319 valign=top style='width:239.4pt;border:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h1>Sample Input</h1>
+  </td>
+  <td width=319 valign=top style='width:239.4pt;border:solid black 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <h1>Output for Sample Input</h1>
+  </td>
+ </tr>
+ <tr style='height:36.85pt'>
+  <td width=319 valign=top style='width:239.4pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:36.85pt'>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>2</span></p>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>5 5 1 10</span></p>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>0 1 70</span></p>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>0 2 40</span></p>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>2 3 100</span></p>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>1 3 50</span></p>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>4 3 80</span></p>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>2 1 30 2</span></p>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>0 1 80</span></p>
+  </td>
+  <td width=319 valign=top style='width:239.4pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:36.85pt'>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>Case 1:
+  62.5000000000</span></p>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>Case 2: 150</span></p>
+  </td>
+ </tr>
+</table>
+
+<h1 style='margin-top:10.0pt'>Note</h1>
+
+<p class=MsoNormal>For sample 1, we get the following picture. We send the data
+through 0 - 2 - 3 - 4.</p>
+
+<p class=MsoNormal align=center style='text-align:center'><img src="data/problems/desc/1321/a.png"></p>
+
+</div>
+
+</body>
+
+</html>
+				<hr style="color: #717171; height: .5px;">
+
+				<div id="problem_setter">
+					Problem Setter: Jane Alam Jan				</div>
+			</div>
+		</div>
+		<span id="showNavigation" style="display: none;">
+<div id="navigation">
+	<div class="navcontainer">
+		<ul class="navlist">
+			<li class="menutitle">Volume</li>
+
+			<li >
+				<a  href="volume_index.php">
+					Volume Home
+				</a>
+			</li>
+			<li id="active">
+				<a id="current" href="volume_problemset.php">
+					Problem Set
+				</a>
+			</li>
+			<li >
+				<a class="submenu" href="volume_problemset.php?volume=10">
+					Volume 10				</a>
+			</li>
+			<li >
+				<a class="submenu" href="volume_problemset.php?volume=11">
+					Volume 11				</a>
+			</li>
+			<li >
+				<a class="submenu" href="volume_problemset.php?volume=12">
+					Volume 12				</a>
+			</li>
+			<li id="active">
+				<a class="submenu" href="volume_problemset.php?volume=13">
+					Volume 13				</a>
+			</li>
+			<li >
+				<a class="submenu" href="volume_problemset.php?volume=14">
+					Volume 14				</a>
+			</li>
+
+
+
+			<li >
+				<a  href="volume_problemcategory.php">
+					Problem Category
+				</a>
+			</li>
+			<li >
+				<a  href="volume_problemsetters.php">
+					Problem Setters
+				</a>
+			</li>
+			<li >
+				<a  href="volume_submit.php">
+					Submit Problem
+				</a>
+			</li>
+			<li >
+				<a  href="volume_usersubmissions.php">
+					My Submissions
+				</a>
+			</li>
+			<li >
+				<a  href="volume_submissions.php">
+					Judge Status
+				</a>
+			</li>
+			<li  >
+				<a  href="javascript:handleSubMenu()">
+					Ranklist
+				</a>
+			</li>
+
+			<span id="subactive" style="display: none;">
+				<li >
+					<a class="submenu" href="volume_ranklist.php">
+						Full Ranklist
+					</a>
+				</li>
+
+				<li >
+					<a class="submenu" href="volume_country_ranklist.php">
+						Country Ranklist
+					</a>
+				</li>
+				<!--
+				<li >
+					<a class="submenu" href="asd">
+						University Ranklist
+					</a>
+				</li>
+				!-->
+				<li >
+					<a class="submenu" href="volume_ranklist.php?type=friend">
+						Friends Ranklist
+					</a>
+				</li>
+			</span>
+
+			<li >
+				<a  href="volume_userstat.php">
+					User Statistics
+				</a>
+			</li>
+			<li >
+				<a  href="volume_compare_userstat.php">
+					Compare User Statistics
+				</a>
+			</li>
+			<li class="menubottom">&nbsp;</li>
+		</ul>
+	</div>
+</div>
+
+<script>
+	function handleSubMenu( ) {
+		if( document.getElementById("subactive").style.display == "none" ) {
+			document.getElementById("subactive").style.display = "inline";
+		}
+		else {
+			document.getElementById("subactive").style.display = "none";
+		}
+	}
+</script>
+		</span>
+<div class="bottomDiv" align="center">
+	<table width="100%">
+		<tr>
+			<td width="50%">
+				<div class="midMessage">
+					Developed and Maintained by
+					<br><b>JANE ALAM JAN</b>
+				</div>
+
+			</td>
+			<td width="50%">
+				<div class="midMessage">
+					Copyright &copy; 2012
+					<br><b>LightOJ, Jane Alam Jan</b>
+				</div>
+
+			</td>
+		</tr>
+	</table>
+</div>
+	</body>
+</html>
