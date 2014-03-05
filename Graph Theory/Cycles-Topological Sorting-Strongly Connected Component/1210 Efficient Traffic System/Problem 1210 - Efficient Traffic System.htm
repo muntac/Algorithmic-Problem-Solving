@@ -1,0 +1,667 @@
+
+<html>
+	<head>
+		<title>Jan's LightOJ :: Problem 1210 - Efficient Traffic System</title>
+		<link rel="stylesheet" type="text/css" href="styles/style.css" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<script>
+			function handleMenu( ) {
+				if( document.getElementById("showNavigation").style.display == "none" ) {
+					document.getElementById("showNavigation").style.display = "inline";
+					document.getElementById("menuImage").src = "images/close_menu.png";
+					document.getElementById("problem").style.margin = "0 3px 0 200px";
+				}
+				else {
+					document.getElementById("showNavigation").style.display = "none";
+					document.getElementById("menuImage").src = "images/open_menu.png";
+					document.getElementById("problem").style.margin = "3px 3px 3px 3px";
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+<style>
+div.tempMessage {
+  float: left;
+  font-size: 30;
+  margin-top: 10px;
+  margin-left: 300px;
+  position: absolute;
+  border: 2px solid white;
+  background: yellow;
+  border-radius: 5px;
+  padding: 2px;
+}
+div.tempMessage a {
+  text-decoration: underline;
+  color: red;
+}
+</style>
+<div class="topDiv">
+			<img src="./images/main.png" class="topImage" style="float: left;">
+                <!--<div class="tempMessage"><a href="http://lightoj.com/lightojv2/contest/215/problems" target=_blank>ACM ICPC Dhaka Regionals Online Preliminary Contest is scheduled here.</a></div>!-->
+			<div class="topMenuMessage" style="display: block; float: right; padding: 50 5 0 0;">
+				Server Time:
+				<a class="top_link" target="_blank" href="http://www.timeanddate.com/worldclock/fixedtime.html?iso=20140305T070241">
+					Wed Mar 5, 2014 1:02 pm				</a>
+			</div>
+		</div>
+		<div class="topMenu" align="center">
+			<table width="100%">
+				<tr>
+					<td width="10%">
+						<div class="topMenuMessage">
+							&nbsp;<a class="top_link" href="index.php">
+								Home
+							</a>
+						</div>
+					</td>
+					<td width="10%">
+						<div class="topMenuMessage">
+							<a class="top_link" href="volume_problemset.php">
+								Volume
+							</a>
+						</div>
+					</td>
+					<td width="10%">
+						<div class="topMenuMessage">
+							<a class="top_link" href="contest_index.php">
+								Contest
+							</a>
+						</div>
+					</td>
+					<td width="10%">
+						<div class="topMenuMessage">
+							<a class="top_link" href="article_showcategory.php">Training</a>
+						</div>
+					</td>
+					<td width="10%">
+						<div class="topMenuMessage">
+							<a class="top_link" href="forum_index.php">Community</a>
+						</div>
+					</td>
+					<td width="10%">
+						<div class="topMenuMessage">
+							<a class="top_link" href="credits_index.php">Credits</a>
+						</div>
+					</td>
+					<td width="60%" align="right">
+						<div class="topMenuMessage">
+							Welcome
+								<a class="top_link" href="index_edituser.php">
+									Muntasir Muzahid Chowdhury								</a>
+							(<a class="top_link" href="login_logout.php">
+								logout
+							</a>)&nbsp;
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="wrapper">
+			<div id="problem">
+				<a href="javascript: handleMenu()" style="float: left;" class="user_link">
+					<img id="menuImage" src="images/open_menu.png" \>
+				</a>
+				<div id="problem_name">
+					1210 - Efficient Traffic System				</div>
+				<div align="center" style="border-top: 1px solid #eeeeee;">
+					<table id="mytable" cellspacing="0" style="width:450;padding: 5 0 0 0;">
+						<td class="one" style="border-top: 1px solid #C1DAD7; border-left: 1px solid #C1DAD7;padding:2 6 0 12;" width=100 title="normal judge">
+							<a class="user_link" href="volume_submit.php?problem=1210">
+								<img src="images/submit1.png">
+							</a>
+						</td>
+						<td class="one" style="border-top: 1px solid #C1DAD7;" width=100>
+							<a class="user_link" href="volume_showproblem.php?problem=1210&language=english&type=pdf">
+								PDF (English)							</a>
+						</td>
+						<td class="one" style="border-top: 1px solid #C1DAD7;" width=100>
+							<a class="user_link" href="volume_problemstat.php?problem=1210">
+								Statistics							</a>
+						</td>
+						<td class="one" style="border-top: 1px solid #C1DAD7;" width=100>
+							<a class="user_link" href="forum_showproblem.php?problem=1210">
+								Forum							</a>
+						</td>
+					</table>
+				</div>
+				<div align="center" style="border-bottom: 1px solid #eeeeee;">
+					<table id="mytable" cellspacing="0" style="width:450;padding: 0 0 5 0;">
+						<td class="two" style="border-left: 1px solid #C1DAD7;" width=100>
+							Time Limit: <span style="color: #B45F04;">2 second(s)</span>
+						</td>
+						<td class="two" width=100>
+							Memory Limit: <span style="color: #B45F04;">32 MB</span>
+						</td>
+					</table>
+				</div>
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Mangal;
+	panose-1:2 4 5 3 5 2 3 3 2 2;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Garamond;
+	panose-1:2 2 4 4 3 3 1 1 8 3;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"Bernard MT Condensed";
+	panose-1:2 5 8 6 6 9 5 2 4 4;}
+@font-face
+	{font-family:"Bookman Old Style";
+	panose-1:2 5 6 4 5 5 5 2 2 4;}
+@font-face
+	{font-family:"Courier 10 Pitch";}
+@font-face
+	{font-family:"DejaVu Sans";}
+@font-face
+	{font-family:"\@Courier 10 Pitch";}
+@font-face
+	{font-family:"\@DejaVu Sans";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	text-align:justify;
+	line-height:115%;
+	font-size:12.0pt;
+	font-family:"Garamond","serif";}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Cambria","serif";
+	color:green;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Arial","sans-serif";
+	color:black;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	line-height:115%;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Garamond","serif";
+	color:#4F81BD;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Header Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Garamond","serif";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Garamond","serif";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:0in;
+	text-align:center;
+	font-size:36.0pt;
+	font-family:"Bernard MT Condensed","serif";
+	color:green;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Title Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	font-size:36.0pt;
+	font-family:"Bernard MT Condensed","serif";
+	color:green;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Title Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	font-size:36.0pt;
+	font-family:"Bernard MT Condensed","serif";
+	color:green;
+	letter-spacing:.25pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Title Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:0in;
+	text-align:center;
+	font-size:36.0pt;
+	font-family:"Bernard MT Condensed","serif";
+	color:green;
+	letter-spacing:.25pt;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{mso-style-link:"Subtitle Char";
+	margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	line-height:115%;
+	font-size:24.0pt;
+	font-family:"Bookman Old Style","serif";
+	letter-spacing:.75pt;
+	font-weight:bold;}
+p.MsoBodyText3, li.MsoBodyText3, div.MsoBodyText3
+	{mso-style-link:"Body Text 3 Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"Verdana","sans-serif";
+	color:black;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+pre
+	{mso-style-link:"HTML Preformatted Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";}
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Garamond","serif";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+span.MsoSubtleEmphasis
+	{color:gray;
+	font-style:italic;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-link:Header;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Arial","sans-serif";
+	color:black;
+	font-weight:bold;}
+span.BodyText3Char
+	{mso-style-name:"Body Text 3 Char";
+	mso-style-link:"Body Text 3";
+	font-family:"Verdana","sans-serif";
+	color:black;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-link:"Balloon Text";
+	font-family:"Tahoma","sans-serif";}
+span.HTMLPreformattedChar
+	{mso-style-name:"HTML Preformatted Char";
+	mso-style-link:"HTML Preformatted";
+	font-family:"Courier New";}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:"Bernard MT Condensed","serif";
+	color:green;
+	letter-spacing:.25pt;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Cambria","serif";
+	color:#4F81BD;
+	font-weight:bold;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Cambria","serif";
+	color:green;
+	font-weight:bold;}
+span.SubtitleChar
+	{mso-style-name:"Subtitle Char";
+	mso-style-link:Subtitle;
+	font-family:"Bookman Old Style","serif";
+	letter-spacing:.75pt;
+	font-weight:bold;}
+p.SampleIO, li.SampleIO, div.SampleIO
+	{mso-style-name:SampleIO;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:16.4pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Courier 10 Pitch";}
+.MsoChpDefault
+	{font-size:10.0pt;}
+ /* Page Definitions */
+ @page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple>
+
+<div class=Section1>
+
+<p class=MsoNormal>I was given the task to make all the major two way roads in Bangladesh
+into one way roads. And I have done that easily with some great pruning. And I
+asked the Govt. Traffic Management System to change the direction of all the
+roads.</p>
+
+<p class=MsoNormal>But after some days, I realized that I should have thought
+of the fact that all cities should be reachable from other cities using the
+existing one way roads. Since the traffic system is already designed, so it may
+not be changed. But I can ask the govt. to build new roads between any pair of
+cities.</p>
+
+<p class=MsoNormal>Now since the task looks quite hard for me, I am asking you
+to do it for me. I will give you the current roads configuration. You have to
+find the minimum number of roads that have to be built such that it's possible
+to go from any city to any other city.</p>
+
+<h1>Input</h1>
+
+<p class=MsoNormal>Input starts with an integer <b>T (</b><b>&#8804; 25)</b>,
+denoting the number of test cases.</p>
+
+<p class=MsoNormal>Each case starts with a blank line. Next line contains two
+integers <b>n (1 &#8804; n &#8804; 20000)</b> and <b>m (0 &#8804; m &#8804;
+50000)</b>, where <b>n</b> denotes the number of cities and <b>m</b> denotes
+the number of one way roads. Each of the next <b>m</b> lines contains two
+integers <b>u v (1 &#8804; u, v &#8804; n, u &#8800; v)</b> meaning that there
+is a road from <b>u</b> to <b>v</b>. Assume that there can be at most one road
+from a city <b>u</b> to <b>v</b>.</p>
+
+<h1>Output</h1>
+
+<p class=MsoNormal>For each case, print the case number and the minimum number
+of roads that have to be built.</p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=319 valign=top style='width:239.4pt;border:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <h1>Sample Input</h1>
+  </td>
+  <td width=319 valign=top style='width:239.4pt;border:solid black 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <h1>Output for Sample Input</h1>
+  </td>
+ </tr>
+ <tr style='height:36.85pt'>
+  <td width=319 valign=top style='width:239.4pt;border:solid black 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:36.85pt'>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>2</span></p>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>&nbsp;</span></p>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>3 0</span></p>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>&nbsp;</span></p>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>3 2</span></p>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>1 2</span></p>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>1 3</span></p>
+  </td>
+  <td width=319 valign=top style='width:239.4pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:36.85pt'>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>Case 1: 3</span></p>
+  <p class=MsoNoSpacing><span style='font-family:"Courier New"'>Case 2: 2</span></p>
+  </td>
+ </tr>
+</table>
+
+<h1 style='margin-top:10.0pt'>Note</h1>
+
+<p class=MsoNormal>Dataset is huge. Use faster I/O methods.</p>
+
+</div>
+
+</body>
+
+</html>
+				<hr style="color: #717171; height: .5px;">
+
+				<div id="problem_setter">
+					Special Thanks: Jane Alam Jan (Description, Solution, Dataset)				</div>
+			</div>
+		</div>
+		<span id="showNavigation" style="display: none;">
+<div id="navigation">
+	<div class="navcontainer">
+		<ul class="navlist">
+			<li class="menutitle">Volume</li>
+
+			<li >
+				<a  href="volume_index.php">
+					Volume Home
+				</a>
+			</li>
+			<li id="active">
+				<a id="current" href="volume_problemset.php">
+					Problem Set
+				</a>
+			</li>
+			<li >
+				<a class="submenu" href="volume_problemset.php?volume=10">
+					Volume 10				</a>
+			</li>
+			<li >
+				<a class="submenu" href="volume_problemset.php?volume=11">
+					Volume 11				</a>
+			</li>
+			<li id="active">
+				<a class="submenu" href="volume_problemset.php?volume=12">
+					Volume 12				</a>
+			</li>
+			<li >
+				<a class="submenu" href="volume_problemset.php?volume=13">
+					Volume 13				</a>
+			</li>
+			<li >
+				<a class="submenu" href="volume_problemset.php?volume=14">
+					Volume 14				</a>
+			</li>
+
+
+
+			<li >
+				<a  href="volume_problemcategory.php">
+					Problem Category
+				</a>
+			</li>
+			<li >
+				<a  href="volume_problemsetters.php">
+					Problem Setters
+				</a>
+			</li>
+			<li >
+				<a  href="volume_submit.php">
+					Submit Problem
+				</a>
+			</li>
+			<li >
+				<a  href="volume_usersubmissions.php">
+					My Submissions
+				</a>
+			</li>
+			<li >
+				<a  href="volume_submissions.php">
+					Judge Status
+				</a>
+			</li>
+			<li  >
+				<a  href="javascript:handleSubMenu()">
+					Ranklist
+				</a>
+			</li>
+
+			<span id="subactive" style="display: none;">
+				<li >
+					<a class="submenu" href="volume_ranklist.php">
+						Full Ranklist
+					</a>
+				</li>
+
+				<li >
+					<a class="submenu" href="volume_country_ranklist.php">
+						Country Ranklist
+					</a>
+				</li>
+				<!--
+				<li >
+					<a class="submenu" href="asd">
+						University Ranklist
+					</a>
+				</li>
+				!-->
+				<li >
+					<a class="submenu" href="volume_ranklist.php?type=friend">
+						Friends Ranklist
+					</a>
+				</li>
+			</span>
+
+			<li >
+				<a  href="volume_userstat.php">
+					User Statistics
+				</a>
+			</li>
+			<li >
+				<a  href="volume_compare_userstat.php">
+					Compare User Statistics
+				</a>
+			</li>
+			<li class="menubottom">&nbsp;</li>
+		</ul>
+	</div>
+</div>
+
+<script>
+	function handleSubMenu( ) {
+		if( document.getElementById("subactive").style.display == "none" ) {
+			document.getElementById("subactive").style.display = "inline";
+		}
+		else {
+			document.getElementById("subactive").style.display = "none";
+		}
+	}
+</script>
+		</span>
+<div class="bottomDiv" align="center">
+	<table width="100%">
+		<tr>
+			<td width="50%">
+				<div class="midMessage">
+					Developed and Maintained by
+					<br><b>JANE ALAM JAN</b>
+				</div>
+
+			</td>
+			<td width="50%">
+				<div class="midMessage">
+					Copyright &copy; 2012
+					<br><b>LightOJ, Jane Alam Jan</b>
+				</div>
+
+			</td>
+		</tr>
+	</table>
+</div>
+	</body>
+</html>
